@@ -1,0 +1,12 @@
+.vs/
+BusinessLogic/bin/
+BusinessLogic/obj/
+DataAccess/bin/
+DataAccess/obj/
+Entities/bin/
+Entities/obj/
+NET_Core_Seed/bin/
+NET_Core_Seed/obj/
+Providers/obj/
+Providers/bin/
+Publish/
