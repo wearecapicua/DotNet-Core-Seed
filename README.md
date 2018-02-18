@@ -1,45 +1,25 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+Steps to run the solution
+=====
+- [x] Run dotnet restore at the root level of the project to restore packages.
+- [x] Run cd DataAccess to move to DataAccess project.
+- [x] Create the database with initial migration running dotnet ef database update
+- [x] Go up and move to directory Net_Core_Seed of the solution. Then run the project with dotnet run
+- [x] Open browser and go to http://localhost:53724/swagger/ to see the available endpoints.
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+Architecture
+=====
+- [x] Multiple tiers (API, BusinessLogin, DataAccess and Entities)
+- [x] Follows sinlgeton pattern for each tier. https://en.wikipedia.org/wiki/Singleton_pattern
+- [x] Follows the Factory pattern for each tier. Each tier has its own factory. https://en.wikipedia.org/wiki/Factory_method_pattern
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
-
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+Features
+=====
+- [x] Framework .NET Core 2.0
+- [x] Swagger to document the api endpoints. More information here: https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=netcore-cli
+- [x] Entity Framework Core as ORM.
+- [x] .NET Core Identity to manage users, roles and social login. (social login configuration is not included in this starter kit.)
+- [x] Fluent Validation (https://github.com/JeremySkinner/FluentValidation/wiki)
+- [x] Automapper. More information here: http://automapper.org/
+- [x] JWT Tokens using Microsoft.AspNetCore.Authentication.JwtBearer package
+- [x] Uses SendGrid for email service. More information: https://sendgrid.com/
+- [x] .NET Core Logging and Loggly as 3rd provider. More information about .net core integrated logging here: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?tabs=aspnetcore2x . More information about Loggly here: https://www.loggly.com/
